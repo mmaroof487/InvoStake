@@ -47,24 +47,41 @@ function Metamask() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "10px" }}>
-      <button
-        onClick={connectWallet}
-        style={{
-          padding: "10px 20px",
-          fontSize: "16px",
-          backgroundColor: "#f6851b",
-          color: "#fff",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-        }}
-      >
-        {account ? `Connected: ${account.slice(0, 6)}...${account.slice(-4)}` : "Connect Meta Musk"}
-      </button>
-      {account && (
-        <p style={{ marginTop: "10px", color: "#333" }}>
-          Connected Account: {account}
-        </p>
+      {isConnected ? (
+        <>
+          <button
+            onClick={disconnectWallet}
+            style={{
+              padding: "10px 20px",
+              fontSize: "16px",
+              backgroundColor: "#dc3545", // Red for disconnect
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer",
+            }}
+          >
+            Disconnect Wallet
+          </button>
+          <p style={{ marginTop: "10px", color: "#333" }}>
+            Connected: {account.slice(0, 6)}...{account.slice(-4)}
+          </p>
+        </>
+      ) : (
+        <button
+          onClick={connectWallet}
+          style={{
+            padding: "10px 20px",
+            fontSize: "16px",
+            backgroundColor: "#2cff05", // Orange for connect
+            color: "#fff",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+          }}
+        >
+          Connect Wallet
+        </button>
       )}
     </div>
   );
