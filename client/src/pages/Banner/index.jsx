@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Bot, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Banner() {
 	const [email, setEmail] = useState("");
 	const [isHovered, setIsHovered] = useState(false);
+	const navigate = useNavigate();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -41,12 +43,15 @@ export default function Banner() {
 					/>
 					<button
 						type="submit"
+						onClick={() => {
+							navigate("/basket");
+						}}
 						onMouseEnter={() => setIsHovered(true)}
 						onMouseLeave={() => setIsHovered(false)}
 						className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full
                      font-medium text-white transition-all duration-300 hover:shadow-lg
                      hover:shadow-blue-500/25 flex items-center gap-2">
-						Join Waitlist
+						Start Investing
 						<ArrowRight
 							className={`w-4 h-4 transition-transform duration-300
                        ${isHovered ? "translate-x-1" : ""}`}
