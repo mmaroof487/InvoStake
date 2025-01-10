@@ -46,7 +46,7 @@ function Metamask() {
   }, []);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <div style={{ textAlign: "center", marginTop: "10px" }}>
       {isConnected ? (
         <>
           <button
@@ -73,7 +73,7 @@ function Metamask() {
           style={{
             padding: "10px 20px",
             fontSize: "16px",
-            backgroundColor: "#f6851b", // Orange for connect
+            backgroundColor: "#2cff05", // Orange for connect
             color: "#fff",
             border: "none",
             borderRadius: "5px",

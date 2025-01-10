@@ -10,8 +10,8 @@ export default function Navbar() {
 					<div className=" py-2 px-4 bg-transparent  border-r-2 border-neon-green">Features</div>
 					<div className=" py-2 px-4 bg-transparent ">Docs</div>
 				</div>
-				<div className="rounded-full py-2 px-4 bg-transparent  border-2 border-neon-green "> 		 <Metamask />
-				 Wait list</div>
+				<div className="rounded-full py-2 px-4 bg-transparent  "> 		 <Metamask />
+				 </div>
 			</div>
 		</>
 	);
