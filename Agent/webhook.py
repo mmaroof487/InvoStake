@@ -3,7 +3,7 @@ import json
 
 app = FastAPI()
 
-@app.post("/webhook")
+@app.post("https://in.tradingview.com/chart/ZYmX4lAC/?symbol=BITSTAMP%3ABTCUSD")
 async def webhook_listener(request: Request):
    
     try:
