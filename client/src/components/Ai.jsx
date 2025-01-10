@@ -7,10 +7,18 @@ export default function Ai() {
 	async function generate() {
 		console.log("fetching");
 		const response = await axios({
-			url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBYggvwrdfIYyAv1GuHuIKMsXDDcqAvzmI",
+			url: import.meta.env.VITE_API_KEY,
 			method: "post",
 			data: {
-				contents: [{ parts: [{ text: "what is blockchain" }] }],
+				contents: [
+					{
+						parts: [
+							{
+								text: import.meta.env.VITE_USER_INPUT,
+							},
+						],
+					},
+				],
 			},
 		});
 		setAnswer(response.data.candidates[0].content.parts[0].text);
@@ -21,7 +29,7 @@ export default function Ai() {
 				onClick={() => {
 					generate();
 				}}
-				className="bg-black p-14 text-white">
+				className="bg-black p-14 text-white cursor-pointer">
 				generate
 			</div>
 
