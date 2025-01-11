@@ -23,10 +23,10 @@ export default function Banner() {
 					<span className="px-4 py-1 bg-blue-500/10 text-blue-500 rounded-full text-sm font-medium">AI-Powered Trading</span>
 				</div>
 				<h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-					AI agents powering your
-					<span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"> investments</span>
+					Modular
+					<span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"> Liquidity</span>
 				</h1>
-				<p className="text-lg md:text-xl text-gray-400 max-w-2xl">Build long-term wealth through intelligent, incremental investing into portfolios that dynamically adapt to market trends</p>
+				<p className="text-lg md:text-xl text-gray-400 max-w-2xl">Solving Liquidity by making a Utility Layer on top of Liquidity pool</p>
 			</div>
 
 			{/* Waitlist Form */}
