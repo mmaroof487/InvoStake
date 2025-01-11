@@ -26,6 +26,10 @@ export default function Banner() {
 					Modular
 					<span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"> Liquidity</span>
 				</h1>
+				<h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+					AI agents powering your
+					<span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"> investments</span>
+				</h1>
 				<p className="text-lg md:text-xl text-gray-400 max-w-2xl">Solving Liquidity by making a Utility Layer on top of Liquidity pool</p>
 			</div>
 

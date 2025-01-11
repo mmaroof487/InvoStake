@@ -15,6 +15,7 @@ const response = await axios({
 		],
 	},
 });
+console.log(answer);
 const answer = response.data.candidates[0].content.parts[0].text;
 
 export default answer;
