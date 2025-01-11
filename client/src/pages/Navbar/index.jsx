@@ -74,8 +74,8 @@ export default function Navbar() {
 							className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full
                 font-medium text-white transition-all duration-300 hover:shadow-lg
                 hover:shadow-blue-500/25"
-							onClick={() => navigate("/basket")}>
-							Start Investing
+							onClick={() => navigate("/metamask")}>
+							Metamask
 						</button>
 					</div>
 				</div>

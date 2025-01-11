@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home";
 import Basket from "../pages/Basket";
+import Metamask from "../pages/Navbar/components/Metamask";
 
 const router = createBrowserRouter([
 	{
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
 	{
 		path: "/basket",
 		element: <Basket />,
+	},
+	{
+		path: "/metamask",
+		element: <Metamask />,
 	},
 ]);
 
