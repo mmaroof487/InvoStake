@@ -70,7 +70,12 @@ export default function Basket() {
 	// Make this function async
 	const handleSubmit = async () => {
 
-		
+		const hasZeroValue = metrics.some((metric) => metric.value === 0);
+
+  if (hasZeroValue) {
+    alert("All values must be non-zero before submitting.");
+    return; // Prevent form submission
+  }
 		// Example usage:
 		setAnswer(getRandomTokens());
 
