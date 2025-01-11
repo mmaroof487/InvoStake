@@ -27,7 +27,7 @@ export default function Navbar() {
 					{/* Logo */}
 					<div className="flex items-center gap-2">
 						<Bot className="w-8 h-8 text-blue-500" />
-						<span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">TradingAI</span>
+						<span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">InvoStake</span>
 					</div>
 
 					{/* Desktop Navigation */}

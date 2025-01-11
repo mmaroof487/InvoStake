@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Activity, Users, PieChart, TrendingDown, LineChart, Droplets } from "lucide-react";
 import Navbar from "../Navbar";
-import axios from "axios";
-
+import getRandomTokens from "./components/token"
 const initialMetrics = [
 	{ name: "User Factor", value: 0.85, icon: <Users className="w-5 h-5" />, trend: 0 },
 	{ name: "Shape Ratio", value: 1.23, icon: <PieChart className="w-5 h-5" />, trend: 0 },
@@ -70,27 +69,10 @@ export default function Basket() {
 
 	// Make this function async
 	const handleSubmit = async () => {
-		try {
-			const response = await axios({
-				url: import.meta.env.VITE_API_KEY,
-				method: "post",
-				data: {
-					contents: [
-						{
-							parts: [
-								{
-									text: import.meta.env.VITE_USER_INPUT,
-								},
-							],
-						},
-					],
-				},
-			});
-			setAnswer(response.data.candidates[0].content.parts[0].text);
-		} catch (error) {
-			console.error("Error fetching AI data:", error);
-			setAnswer("Failed to fetch data.");
-		}
+
+		
+		// Example usage:
+		setAnswer(getRandomTokens());
 
 		const zeroedMetrics = metrics.map((metric) => ({ ...metric, value: 0, trend: 0 }));
 		setMetrics(zeroedMetrics);
@@ -183,12 +165,20 @@ export default function Basket() {
 
 					{showRightPanel && (
 						<div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 w-full max-w-md shadow-2xl border border-purple-500/20 animate-fade-in">
-							<div className="space-y-4">
-								<h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Your AI Recommended BASKET</h3>
-								<p className="text-gray-300">{answer ? answer : "fetching....."}</p>
-								<div className="h-1 w-full bg-gradient-to-r from-purple-500 to-blue-500 rounded animate-pulse" />
-							</div>
+						<div className="space-y-4">
+							<h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+								Your AI Recommended BASKET
+							</h3>
+							<p 
+								className="text-gray-300 break-words overflow-hidden text-ellipsis"
+								style={{ wordBreak: 'break-word', whiteSpace: 'normal' }}
+							>
+								{answer ? answer : "fetching....."}
+							</p>
+							<div className="h-1 w-full bg-gradient-to-r from-purple-500 to-blue-500 rounded animate-pulse" />
 						</div>
+					</div>
+					
 					)}
 				</div>
 			</div>
