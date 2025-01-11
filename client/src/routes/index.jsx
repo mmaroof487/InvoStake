@@ -16,10 +16,6 @@ const router = createBrowserRouter([
 		path: "/basket",
 		element: <Basket />,
 	},
-	{
-		path: "/metamask",
-		element: <Metamask />,
-	},
 ]);
 
 export default function AppRoutes() {

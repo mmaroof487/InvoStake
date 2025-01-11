@@ -48,37 +48,25 @@ function Metamask() {
   return (
     <div style={{ textAlign: "center", marginTop: "10px" }}>
       {isConnected ? (
-        <>
+        <div className="translate-y-3">
           <button
             onClick={disconnectWallet}
-            style={{
-              padding: "10px 20px",
-              fontSize: "16px",
-              backgroundColor: "#dc3545", // Red for disconnect
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
+            className="px-6 py-2 bg-gradient-to-r from-purple-800 to-blue-800 rounded-full
+            font-medium text-white transition-all duration-300 hover:shadow-lg
+            hover:shadow-blue-500/25"
           >
             Disconnect Wallet
           </button>
-          <p style={{ marginTop: "10px", color: "#333" }}>
+          <p className="mt-[5px] bg-gradient-to-r from-purple-800 to-blue-800 bg-clip-text text-transparent">
             Connected: {account.slice(0, 6)}...{account.slice(-4)}
           </p>
-        </>
+        </div>
       ) : (
         <button
           onClick={connectWallet}
-          style={{
-            padding: "10px 20px",
-            fontSize: "16px",
-            backgroundColor: "#2cff05", // Orange for connect
-            color: "#fff",
-            border: "none",
-            borderRadius: "5px",
-            cursor: "pointer",
-          }}
+          className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full
+                font-medium text-white transition-all duration-300 hover:shadow-lg
+                hover:shadow-blue-500/25"
         >
           Connect Wallet
         </button>

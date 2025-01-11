@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Bot } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Metamask from "./components/Metamask"
 
 export default function Navbar() {
 	const [activeTab, setActiveTab] = useState("Home");
@@ -70,13 +71,7 @@ export default function Navbar() {
 
 					{/* CTA Button */}
 					<div className="hidden md:block">
-						<button
-							className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full
-                font-medium text-white transition-all duration-300 hover:shadow-lg
-                hover:shadow-blue-500/25"
-							onClick={() => navigate("/metamask")}>
-							Metamask
-						</button>
+						<Metamask />
 					</div>
 				</div>
 			</div>
