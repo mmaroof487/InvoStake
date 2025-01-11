@@ -1,6 +1,6 @@
 <h1>InvoStake</h1>
-<img src="https:![1](https://github.com/user-attachments/assets/a2ccb1d7-6b1d-4b1c-a910-4403c57d1a92)
-" alt="Project Logo" width="200">
+![1](https://github.com/user-attachments/assets/7b6102fb-576f-4ee2-b4ae-8c8112df2009)
+
 
 
 <h2>Problem InvoStake Solves</h2>
