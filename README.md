@@ -1,4 +1,5 @@
 <h1>InvoStake</h1>
+![1](https://github.com/user-attachments/assets/740e90f4-b309-4edb-9740-4f16b43ec547)
 
 <h2>Problem InvoStake Solves</h2>
 
