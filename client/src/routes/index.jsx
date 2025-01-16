@@ -1,23 +1,15 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Basket from "../pages/Basket";
-import Metamask from "../pages/Navbar/components/Metamask";
-
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <Home />,
-	},
-	{
-		path: "/home",
-		element: <Home />,
-	},
-	{
-		path: "/basket",
-		element: <Basket />,
-	},
-]);
 
 export default function AppRoutes() {
-	return <RouterProvider router={router} />;
+	return (
+		<HashRouter>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/home" element={<Home />} />
+				<Route path="/basket" element={<Basket />} />
+			</Routes>
+		</HashRouter>
+	);
 }
